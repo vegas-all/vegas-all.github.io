@@ -19,6 +19,12 @@
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
         .logo span { color: var(--accent); }
+        .logo {
+            max-width: 200px;   /* or whatever upper limit you want */
+            width: 100%;        /* scales automatically */
+            height: auto;       /* keeps proportions */
+            }
+
         nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
         .btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
         .btn-accent { background: var(--accent); color: var(--dark); }
