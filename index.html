@@ -31,8 +31,15 @@
         .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; }
         .hero .btn { margin: 10px; padding: 15px 30px; font-size: 18px; }
 
-        /* Pillars Section */
+        /* Mission Section */
         .section { padding: 60px 5%; text-align: center; }
+        .mission-intro { max-width: 900px; margin: 0 auto 50px; }
+        .mission-block { margin-bottom: 40px; text-align: left; display: inline-block; width: 100%; max-width: 900px; }
+        .mission-block h3 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; }
+        .mission-block p { font-size: 16px; line-height: 1.8; color: var(--dark); }
+
+        /* Pillars Section */
+        .pillars-intro { margin: 50px 0 30px 0; font-size: 18px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: var(--light); padding: 30px; border-radius: 8px; border-top: 5px solid var(--primary); text-align: left; }
         .card-number { font-size: 28px; font-weight: bold; color: var(--accent); margin-bottom: 10px; }
@@ -70,10 +77,22 @@
         <a href="#events" class="btn btn-accent">Join Our Next Event</a>
     </section>
 
-    <!-- Four Pillars Section -->
+    <!-- Mission & Pillars Section -->
     <section id="about" class="section">
+        <div class="mission-intro">
+            <div class="mission-block">
+                <h3>Our Vision</h3>
+                <p>To build a globally connected, actively engaged, and well-nourished society — where the joy of sport directly fuels the eradication of hunger, bringing communities together from Las Vegas to the world.</p>
+            </div>
+            
+            <div class="mission-block">
+                <h3>Our Mission</h3>
+                <p>Vegas ALL Non-Profit Corporation serves both the local Las Vegas community and international initiatives by uniting people through sports, outreach, and nourishment. We leverage the universal appeal of pickleball to raise funds and awareness, while operating direct programs that alleviate hunger and food insecurity — one paddle, one plate, one community at a time.</p>
+            </div>
+        </div>
+
         <h2>Our Four Pillars of Impact</h2>
-        <p style="max-width: 600px; margin: 0 auto; color: #666;">How a simple game creates lasting, positive waves across our local community.</p>
+        <p class="pillars-intro">How a simple game creates lasting, positive waves across our local community.</p>
         <div class="grid">
             <div class="card">
                 <div class="card-number">01</div>
