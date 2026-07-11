@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickleball For Good | Serve Kindness & Joy</title>
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Deep Trust Blue */
+            --accent: #84cc16;  /* Vibrant Pickleball Lime Green */
+            --dark: #1f2937;    /* Charcoal Text */
+            --light: #f3f4f6;   /* Clean Light Gray */
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--dark); line-height: 1.6; background-color: #ffffff; }
+        
+        /* Header & Navigation */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
+        .btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
+        .btn-accent { background: var(--accent); color: var(--dark); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 100px 5%; text-align: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; }
+        .hero .btn { margin: 10px; padding: 15px 30px; font-size: 18px; }
+
+        /* Pillars Section */
+        .section { padding: 60px 5%; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1max)); gap: 30px; margin-top: 40px; }
+        .card { background: var(--light); padding: 30px; border-radius: 8px; border-top: 5px solid var(--primary); }
+        .card h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* Toy Drive Banner */
+        .toy-drive { background: #fef08a; padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: 2px dashed #eab308; }
+        .toy-drive h2 { color: #a16207; margin-bottom: 15px; }
+        .toy-drive p { max-width: 600px; margin: 0 auto 20px; font-weight: 500; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; font-size: 14px; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Pickleball<span>ForGood</span></div>
+        <nav>
+            <a href="#about">Our Mission</a>
+            <a href="#events">Events</a>
+            <a href="#toydrive">Toy Drive</a>
+            <a href="#donate" class="btn">Donate</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Playing for the Body, Mind, & Community</h1>
+        <p>We use the joy of pickleball to fight isolation, foster deep mental wellness, and raise critical support for underprivileged local families.</p>
+        <a href="#events" class="btn btn-accent">Join Our Next Event</a>
+        <a href="#donate" class="btn">Support Our Mission</a>
+    </section>
+
+    <!-- Four Pillars Section -->
+    <section id="about" class="section">
+        <h2>Our Four Pillars of Impact</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: #666;">How a simple game creates lasting, positive waves across our local community.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>🏓 Physical Health</h3>
+                <p>Active exercise made accessible to all, breaking down costly fitness barriers.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 Mental Wellness</h3>
+                <p>Cultivating rich belonging and stress relief to fight daily isolation.</p>
+            </div>
+            <div class="card">
+                <h3>😄 Pure Joy</h3>
+                <p>Fostering an inclusive, judgment-free culture of laughter and fun.</p>
+            </div>
+            <div class="card">
+                <h3>🤝 Direct Relief</h3>
+                <p>Turning court entry fees into real support for under-resourced families.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toy Drive Feature -->
+    <section id="toydrive" class="toy-drive">
+        <h2>🧸 Paddles & Playthings Toy Drive</h2>
+        <p>Help us bring pure smiles and childhood wonder to underprivileged youth. We are collecting new, unwrapped toys at all open-play courts this month!</p>
+        <a href="#register" class="btn" style="background: #a16207;">Drop-off Locations</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pickleball For Good. Built with love, laughter, and kindness.</p>
+    </footer>
+
+</body>
+</html>
