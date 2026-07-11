@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="/assets/images/Vegas All Logo.jpg" alt="logo">
     <title>Pickleball For Good | Serve Kindness & Joy</title>
     <style>
         :root {
@@ -17,13 +16,10 @@
 
         /* Header & Navigation */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-img { max-width: 80px; width: auto; height: auto; }
         .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
         .logo span { color: var(--accent); }
-        .logo {
-            max-width: 200px;   /* or whatever upper limit you want */
-            width: 10%;        /* scales automatically */
-            height: auto;       /* keeps proportions */
-            }
 
         nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
         .btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
@@ -37,7 +33,7 @@
 
         /* Pillars Section */
         .section { padding: 60px 5%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1max)); gap: 30px; margin-top: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: var(--light); padding: 30px; border-radius: 8px; border-top: 5px solid var(--primary); }
         .card h3 { margin-bottom: 15px; color: var(--primary); }
 
@@ -54,12 +50,14 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">Pickleball<span>ForGood</span></div>
+        <div class="logo-container">
+            <img src="/assets/images/Vegas All Logo.jpg" alt="logo" class="logo-img">
+            <div class="logo">Pickleball<span>ForGood</span></div>
+        </div>
         <nav>
             <a href="#about">Our Mission</a>
             <a href="#events">Events</a>
             <a href="#toydrive">Toy Drive</a>
-            <a href="#donate" class="btn">Donate</a>
         </nav>
     </header>
 
@@ -68,7 +66,6 @@
         <h1>Playing for the Body, Mind, & Community</h1>
         <p>We use the joy of pickleball to fight isolation, foster deep mental wellness, and raise critical support for underprivileged local families.</p>
         <a href="#events" class="btn btn-accent">Join Our Next Event</a>
-        <a href="#donate" class="btn">Support Our Mission</a>
     </section>
 
     <!-- Four Pillars Section -->
