@@ -40,16 +40,16 @@
         .section { padding: 60px 5%; text-align: center; }
         .mission-intro { max-width: 900px; margin: 0 auto 50px; }
         .mission-block { margin-bottom: 40px; text-align: left; display: inline-block; width: 100%; max-width: 900px; }
-        .mission-block h3 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .mission-block h3 { color: var(--primary); font-size: 22px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .mission-block p { font-size: 16px; line-height: 1.8; color: var(--dark); }
 
         /* Section Heading */
-        .section h2 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .section h2 { color: var(--primary); font-size: 22px; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Pillars Section */
         .pillars-intro { margin: 50px 0 30px 0; font-size: 18px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: var(--light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent); text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card { background: var(--light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent); text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); }
         .card-number { font-size: 28px; font-weight: bold; color: var(--accent); margin-bottom: 10px; }
         .card h3 { margin-bottom: 15px; color: var(--primary); font-size: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -58,7 +58,7 @@
         /* Contact Us Section */
         .contact-section { background: var(--light); padding: 60px 5%; }
         .contact-container { max-width: 600px; margin: 0 auto; }
-        .contact-section h2 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+        .contact-section h2 { color: var(--primary); font-size: 22px; font-weight: bold; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600; }
         .form-group input,
@@ -72,12 +72,12 @@
         .form-message.success { background: #d4edda; color: #155724; display: block; }
 
         /* Toy Drive Banner */
-        .toy-drive { background: linear-gradient(135deg, var(--accent) 0%, #FFE54C 100%); padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: none; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+        .toy-drive { background: linear-gradient(135deg, var(--accent) 0%, #FFE54C 100%); padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .toy-drive h2 { color: var(--primary); margin-bottom: 15px; font-size: 28px; }
         .toy-drive p { max-width: 600px; margin: 0 auto 20px; font-weight: 500; color: var(--primary); }
 
         /* Chat Bot Widget */
-        .chat-widget { position: fixed; bottom: 20px; right: 20px; width: 380px; height: 600px; background: white; border-radius: 10px; box-shadow: 0 5px 40px rgba(0,0,0,0.16); display: flex; flex-direction: column; z-index: 999; font-family: inherit; }
+        .chat-widget { position: fixed; bottom: 20px; right: 20px; width: 380px; height: 600px; background: white; border-radius: 10px; box-shadow: 0 5px 40px rgba(0,0,0,0.16); display: flex; flex-direction: column; z-index: 9999; }
         .chat-header { background: var(--primary); color: white; padding: 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
         .chat-header h3 { font-size: 16px; margin: 0; }
         .chat-close { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
@@ -93,7 +93,7 @@
         .chat-input input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
         .chat-input button { background: var(--accent); color: var(--primary); border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
         .chat-input button:hover { background: #FFC700; }
-        .chat-toggle { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: var(--accent); border: none; border-radius: 50%; color: var(--primary); font-size: 24px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 998; transition: background 0.3s ease; }
+        .chat-toggle { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: var(--accent); border: none; border-radius: 50%; color: var(--primary); font-size: 24px; cursor: pointer; z-index: 9998; transition: background 0.3s ease; }
         .chat-toggle:hover { background: #FFC700; }
         .chat-widget.hidden { display: none; }
 
@@ -133,12 +133,12 @@
         <div class="mission-intro">
             <div class="mission-block">
                 <h3>Our Vision</h3>
-                <p>To build a globally connected, actively engaged, and well-nourished society — where the joy of sport directly fuels the eradication of hunger, bringing communities together from Las Vegas to the world.</p>
+                <p>To build a globally connected, actively engaged, and well-nourished society — where the joy of sport directly fuels the eradication of hunger, bringing communities together for good.</p>
             </div>
             
             <div class="mission-block">
                 <h3>Our Mission</h3>
-                <p>Vegas ALL Non-Profit Corporation serves both the local Las Vegas community and international initiatives by uniting people through sports, outreach, and nourishment. We leverage the universal appeal of pickleball to raise funds and awareness, while operating direct programs that alleviate hunger and food insecurity — one paddle, one plate, one community at a time.</p>
+                <p>Vegas ALL Non-Profit Corporation serves both the local Las Vegas community and international initiatives by uniting people through sports, outreach, and nourishment. We leverage the power of pickleball to combat hunger, strengthen mental wellness, and create meaningful community bonds.</p>
             </div>
         </div>
 
@@ -148,12 +148,12 @@
             <div class="card">
                 <div class="card-number">01</div>
                 <h3>FEEDING</h3>
-                <p>Operating hunger relief initiatives that deliver nutritious meals to vulnerable and underserved populations — both locally in Las Vegas and internationally, including our 2026 toy and food drive in the Philippines.</p>
+                <p>Operating hunger relief initiatives that deliver nutritious meals to vulnerable and underserved populations — both locally in Las Vegas and internationally, including our 2025 Philippines Food Drive.</p>
             </div>
             <div class="card">
                 <div class="card-number">02</div>
                 <h3>FUNDRAISING</h3>
-                <p>Organizing high-energy, community-driven charity events that generate essential resources — supporting local nonprofits, international aid projects, and the causes closest to our members' hearts.</p>
+                <p>Organizing high-energy, community-driven charity events that generate essential resources — supporting local nonprofits, international aid projects, and the causes closest to our hearts.</p>
             </div>
             <div class="card">
                 <div class="card-number">03</div>
@@ -163,7 +163,7 @@
             <div class="card">
                 <div class="card-number">04</div>
                 <h3>WELLNESS</h3>
-                <p>Championing health and wellbeing as a foundation for stronger communities — because the same energy that drives a great match on the court is the energy we bring to serving others off of it.</p>
+                <p>Championing health and wellbeing as a foundation for stronger communities — because the same energy that drives a great match on the court is the energy we bring to serving others.</p>
             </div>
         </div>
     </section>
