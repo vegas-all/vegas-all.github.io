@@ -42,6 +42,21 @@
             </div>
 
             <h2>Our Four Pillars of Impact</h2>
+            <style>
+                .grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr); /* Forces exactly 4 equal-width columns */
+                    gap: 20px; /* Adjust spacing between cards as needed */
+                    width: 100%;
+                }
+            
+                /* Keeps it responsive so cards stack properly on mobile screens */
+                @media (max-width: 768px) {
+                    .grid {
+                        grid-template-columns: 1fr; 
+                    }
+                }
+            </style>
             <p class="pillars-intro">How a simple game creates lasting, positive waves across our local community.</p>
             <div class="grid">
                 <div class="card">
