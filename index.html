@@ -14,7 +14,13 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { color: var(--dark); line-height: 1.6; background-color: #ffffff; }
-        
+
+        .logo {
+              max-width: 200px;   /* or whatever upper limit you want */
+              width: 100%;        /* scales automatically */
+              height: auto;       /* keeps proportions */
+        }
+
         /* Header & Navigation */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
