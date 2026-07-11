@@ -6,10 +6,11 @@
     <title>Pickleball For Good | Serve Kindness & Joy</title>
     <style>
         :root {
-            --primary: #1e3a8a; /* Deep Trust Blue */
-            --accent: #84cc16;  /* Vibrant Pickleball Lime Green */
-            --dark: #1f2937;    /* Charcoal Text */
-            --light: #f3f4f6;   /* Clean Light Gray */
+            --primary: #1a2847; /* Deep Navy - Professional & Trustworthy */
+            --accent: #FFD700;  /* Vegas Gold - Energy & Glamour */
+            --highlight: #00D084; /* Fresh Lime Green - Sport & Vitality */
+            --dark: #2D3436;    /* Charcoal Text */
+            --light: #F8F9FA;   /* Warm White */
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { color: var(--dark); line-height: 1.6; background-color: #ffffff; }
@@ -22,12 +23,15 @@
         .logo span { color: var(--accent); }
 
         nav { flex-basis: 100%; margin-top: 15px; }
-        nav a { margin-right: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
-        .btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
-        .btn-accent { background: var(--accent); color: var(--dark); }
+        nav a { margin-right: 20px; text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover { color: var(--accent); }
+        .btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s ease; }
+        .btn:hover { background: var(--highlight); }
+        .btn-accent { background: var(--accent); color: var(--primary); }
+        .btn-accent:hover { background: #FFC700; }
         
         /* Hero Section */
-        .hero { background: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 100px 5%; text-align: center; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, #2d3e5f 100%); color: white; padding: 100px 5%; text-align: center; }
         .hero h1 { font-size: 48px; margin-bottom: 20px; }
         .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; }
         .hero .btn { margin: 10px; padding: 15px 30px; font-size: 18px; }
@@ -36,24 +40,28 @@
         .section { padding: 60px 5%; text-align: center; }
         .mission-intro { max-width: 900px; margin: 0 auto 50px; }
         .mission-block { margin-bottom: 40px; text-align: left; display: inline-block; width: 100%; max-width: 900px; }
-        .mission-block h3 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; }
+        .mission-block h3 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .mission-block p { font-size: 16px; line-height: 1.8; color: var(--dark); }
+
+        /* Section Heading */
+        .section h2 { color: var(--primary); font-size: 36px; margin-bottom: 20px; }
 
         /* Pillars Section */
         .pillars-intro { margin: 50px 0 30px 0; font-size: 18px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: var(--light); padding: 30px; border-radius: 8px; border-top: 5px solid var(--primary); text-align: left; }
+        .card { background: var(--light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent); text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); }
         .card-number { font-size: 28px; font-weight: bold; color: var(--accent); margin-bottom: 10px; }
-        .card h3 { margin-bottom: 15px; color: var(--primary); font-size: 20px; }
-        .card p { font-size: 14px; line-height: 1.5; }
+        .card h3 { margin-bottom: 15px; color: var(--primary); font-size: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card p { font-size: 14px; line-height: 1.5; color: var(--dark); }
 
         /* Toy Drive Banner */
-        .toy-drive { background: #fef08a; padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: 2px dashed #eab308; }
-        .toy-drive h2 { color: #a16207; margin-bottom: 15px; }
-        .toy-drive p { max-width: 600px; margin: 0 auto 20px; font-weight: 500; }
+        .toy-drive { background: linear-gradient(135deg, var(--accent) 0%, #FFE54C 100%); padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: none; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+        .toy-drive h2 { color: var(--primary); margin-bottom: 15px; font-size: 28px; }
+        .toy-drive p { max-width: 600px; margin: 0 auto 20px; font-weight: 500; color: var(--primary); }
 
         /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 30px; font-size: 14px; margin-top: 60px; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -122,7 +130,7 @@
     <section id="toydrive" class="toy-drive">
         <h2>🧸 Paddles & Playthings Toy Drive</h2>
         <p>Help us bring pure smiles and childhood wonder to underprivileged youth. We are collecting new, unwrapped toys at all open-play courts this month!</p>
-        <a href="#register" class="btn" style="background: #a16207;">Drop-off Locations</a>
+        <a href="#register" class="btn">Drop-off Locations</a>
     </section>
 
     <!-- Footer -->
