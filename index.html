@@ -70,7 +70,6 @@
         .contact-btn:hover { background: #FFC700; }
         .form-message { text-align: center; margin-top: 15px; padding: 10px; border-radius: 5px; display: none; }
         .form-message.success { background: #d4edda; color: #155724; display: block; }
-        .form-message.error { background: #f8d7da; color: #721c24; display: block; }
 
         /* Toy Drive Banner */
         .toy-drive { background: linear-gradient(135deg, var(--accent) 0%, #FFE54C 100%); padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: none; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
@@ -89,6 +88,7 @@
         .message-content { max-width: 70%; padding: 10px 15px; border-radius: 8px; font-size: 14px; line-height: 1.4; }
         .message.bot .message-content { background: white; color: var(--dark); border: 1px solid #ddd; }
         .message.user .message-content { background: var(--accent); color: var(--primary); }
+        .message-link { color: var(--primary); font-weight: bold; cursor: pointer; text-decoration: underline; }
         .chat-input { padding: 15px; border-top: 1px solid #ddd; display: flex; gap: 10px; }
         .chat-input input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
         .chat-input button { background: var(--accent); color: var(--primary); border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
@@ -224,7 +224,7 @@
     </div>
 
     <script>
-        // Contact Form Handler
+        // Contact Form Handler with mailto
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -232,11 +232,17 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Simulate form submission (in production, this would send to a backend)
-            console.log('Form submitted:', { name, email, message });
+            // Create mailto link
+            const subject = encodeURIComponent(`Contact from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:info@vegas-all.org?subject=${subject}&body=${body}`;
             
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
             const formMessage = document.getElementById('formMessage');
-            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessage.textContent = 'Opening your email client... Your message will be sent to info@vegas-all.org';
             formMessage.classList.add('success');
             
             this.reset();
@@ -270,9 +276,10 @@
             'mission': 'Our mission is to unite people through sports, outreach, and nourishment. We combat hunger and build community through pickleball.',
             'feeding': 'We operate hunger relief initiatives both locally and internationally. We also run our annual toy and food drive in the Philippines!',
             'pickleball': 'Pickleball is our platform for building social connection, promoting active lifestyles, and turning play into purpose.',
-            'contact': 'You can reach us through the contact form on this page or send us a message here!',
+            'contact': 'You can reach us through our contact form or by sending an email to info@vegas-all.org. We\'d love to hear from you!',
             'help': 'I can help you with questions about our mission, events, programs, or how to get involved. What would you like to know?',
-            'default': 'That\'s a great question! Feel free to contact us through our contact form or call us. How else can I help?'
+            'email': 'You can reach us at info@vegas-all.org',
+            'default': 'That\'s a great question! Feel free to contact us at info@vegas-all.org or use our contact form. How else can I help?'
         };
 
         function getBotResponse(userMessage) {
