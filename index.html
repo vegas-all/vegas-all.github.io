@@ -36,12 +36,6 @@
         .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
         .hero .btn { margin: 10px; padding: 15px 30px; font-size: 18px; }
 
-        /* About Us Section */
-        .about-section { padding: 60px 5%; background: #ffffff; }
-        .about-container { max-width: 900px; margin: 0 auto; text-align: left; }
-        .about-section h2 { color: var(--accent); font-size: 28px; font-weight: bold; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
-        .about-section p { font-size: 16px; line-height: 1.8; color: var(--dark); margin-bottom: 20px; }
-
         /* Mission Section */
         .section { padding: 60px 5%; text-align: center; }
         .mission-intro { max-width: 900px; margin: 0 auto 50px; }
@@ -116,14 +110,17 @@
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <img src="/assets/images/Vegas All Logo.jpg" alt="logo" class="logo-img">
-            <div class="logo">Pickleball<span>ForGood</span></div>
+            <a href="index.html" style="text-decoration: none;">
+                <img src="/assets/images/Vegas All Logo.jpg" alt="logo" class="logo-img">
+                <div class="logo">Pickleball<span>ForGood</span></div>
+            </a>
         </div>
         <nav>
-            <a href="#about-us">About Us</a>
-            <a href="#about">Our Mission</a>
-            <a href="#events">Events</a>
-            <a href="#toydrive">Toy Drive</a>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="mission.html">Our Mission</a>
+            <a href="events.html">Events</a>
+            <a href="toy-drive.html">Toy Drive</a>
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
@@ -132,18 +129,7 @@
     <section class="hero">
         <h1>Playing for the Body, Mind, & Community</h1>
         <p>We use the joy of pickleball to fight isolation, foster deep mental wellness, and raise critical support for underprivileged local families.</p>
-        <a href="#events" class="btn btn-accent">Join Our Next Event</a>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about-us" class="about-section">
-        <div class="about-container">
-            <h2>About Us</h2>
-            <p>Vegas ALL began the way great movements often do — with a group of individuals brought together by a shared love of the game. What started as friendly pickleball matches in Las Vegas quickly evolved into something greater: a community rooted in connection, active living, and purpose.</p>
-            <p>As our members' bond deepened, so did our reach — local meetups became out-of-town trips, and out-of-town trips became international outreach. In 2026, Vegas ALL organized a toy and food drive in the Philippines, an experience that redefined who we are and what we're capable of as an organization.</p>
-            <p>Today, Vegas ALL Non-Profit Corporation stands at the intersection of sport and service. We leverage the universal, inclusive appeal of pickleball to build community and raise funds — channeling that energy directly into hunger relief, wellness initiatives, and outreach programs that serve vulnerable populations both at home and abroad.</p>
-            <p>We believe sport has the power to do more than bring people together on the court — it can nourish, connect, and uplift entire communities. This is Vegas ALL: serving up hope on the court, and fighting hunger in the community, from Las Vegas to the world.</p>
-        </div>
+        <a href="events.html" class="btn btn-accent">Join Our Next Event</a>
     </section>
 
     <!-- Mission & Pillars Section -->
@@ -190,7 +176,7 @@
     <section id="toydrive" class="toy-drive">
         <h2>🧸 Paddles & Playthings Toy Drive</h2>
         <p>Help us bring pure smiles and childhood wonder to underprivileged youth. We are collecting new, unwrapped toys at all open-play courts this month!</p>
-        <a href="#register" class="btn">Drop-off Locations</a>
+        <a href="toy-drive.html" class="btn">Drop-off Locations</a>
     </section>
 
     <!-- Contact Us Section -->
@@ -241,106 +227,6 @@
         </div>
     </div>
 
-    <script>
-        // Contact Form Handler with mailto
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link
-            const subject = encodeURIComponent(`Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:info@vegas-all.org?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            const formMessage = document.getElementById('formMessage');
-            formMessage.textContent = 'Opening your email client... Your message will be sent to info@vegas-all.org';
-            formMessage.classList.add('success');
-            
-            this.reset();
-            
-            setTimeout(() => {
-                formMessage.classList.remove('success');
-            }, 5000);
-        });
-
-        // Chat Bot Handler
-        const chatToggle = document.getElementById('chatToggle');
-        const chatWidget = document.getElementById('chatWidget');
-        const chatClose = document.getElementById('chatClose');
-        const chatSend = document.getElementById('chatSend');
-        const chatInput = document.getElementById('chatInput');
-        const chatMessages = document.getElementById('chatMessages');
-
-        chatToggle.addEventListener('click', () => {
-            chatWidget.classList.toggle('hidden');
-        });
-
-        chatClose.addEventListener('click', () => {
-            chatWidget.classList.add('hidden');
-        });
-
-        // Simple AI Bot Responses
-        const botResponses = {
-            'hello': 'Hi there! How can we help you today?',
-            'hi': 'Hello! Welcome to Vegas ALL. What can I do for you?',
-            'events': 'We host pickleball events throughout Las Vegas! Check our website for upcoming events or ask about specific dates.',
-            'mission': 'Our mission is to unite people through sports, outreach, and nourishment. We combat hunger and build community through pickleball.',
-            'feeding': 'We operate hunger relief initiatives both locally and internationally. We also run our annual toy and food drive in the Philippines!',
-            'pickleball': 'Pickleball is our platform for building social connection, promoting active lifestyles, and turning play into purpose.',
-            'contact': 'You can reach us through our contact form or by sending an email to info@vegas-all.org. We\'d love to hear from you!',
-            'help': 'I can help you with questions about our mission, events, programs, or how to get involved. What would you like to know?',
-            'email': 'You can reach us at info@vegas-all.org',
-            'default': 'That\'s a great question! Feel free to contact us at info@vegas-all.org or use our contact form. How else can I help?'
-        };
-
-        function getBotResponse(userMessage) {
-            const message = userMessage.toLowerCase();
-            for (let key in botResponses) {
-                if (message.includes(key)) {
-                    return botResponses[key];
-                }
-            }
-            return botResponses['default'];
-        }
-
-        function sendMessage() {
-            const userMessage = chatInput.value.trim();
-            if (!userMessage) return;
-
-            // Add user message to chat
-            const userMsgDiv = document.createElement('div');
-            userMsgDiv.className = 'message user';
-            userMsgDiv.innerHTML = `<div class="message-content">${userMessage}</div>`;
-            chatMessages.appendChild(userMsgDiv);
-
-            // Clear input
-            chatInput.value = '';
-
-            // Simulate bot response delay
-            setTimeout(() => {
-                const botResponse = getBotResponse(userMessage);
-                const botMsgDiv = document.createElement('div');
-                botMsgDiv.className = 'message bot';
-                botMsgDiv.innerHTML = `<div class="message-content">${botResponse}</div>`;
-                chatMessages.appendChild(botMsgDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 500);
-
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        chatSend.addEventListener('click', sendMessage);
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-    </script>
-
+    <script src="/assets/js/common.js"></script>
 </body>
 </html>

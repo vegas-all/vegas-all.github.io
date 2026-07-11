@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission | Pickleball For Good</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none;">
+                <img src="/assets/images/Vegas All Logo.jpg" alt="logo" class="logo-img">
+                <div class="logo">Pickleball<span>ForGood</span></div>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="mission.html">Our Mission</a>
+            <a href="events.html">Events</a>
+            <a href="toy-drive.html">Toy Drive</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="mission-page-section">
+        <div class="section-container">
+            <h1>Our Mission & Vision</h1>
+            
+            <div class="mission-block">
+                <h2>Our Vision</h2>
+                <p>To build a globally connected, actively engaged, and well-nourished society — where the joy of sport directly fuels the eradication of hunger, bringing communities together for good.</p>
+            </div>
+            
+            <div class="mission-block">
+                <h2>Our Mission</h2>
+                <p>Vegas ALL Non-Profit Corporation serves both the local Las Vegas community and international initiatives by uniting people through sports, outreach, and nourishment. We leverage the power of pickleball to combat hunger, strengthen mental wellness, and create meaningful community bonds.</p>
+            </div>
+
+            <h2>Our Four Pillars of Impact</h2>
+            <p class="pillars-intro">How a simple game creates lasting, positive waves across our local community.</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-number">01</div>
+                    <h3>FEEDING</h3>
+                    <p>Operating hunger relief initiatives that deliver nutritious meals to vulnerable and underserved populations — both locally in Las Vegas and internationally, including our 2025 Philippines Food Drive.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">02</div>
+                    <h3>FUNDRAISING</h3>
+                    <p>Organizing high-energy, community-driven charity events that generate essential resources — supporting local nonprofits, international aid projects, and the causes closest to our hearts.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">03</div>
+                    <h3>PICKLEBALL</h3>
+                    <p>Leveraging the inclusive, fast-growing sport of pickleball as our platform — building social connection, promoting active lifestyles, and turning play into purpose.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">04</div>
+                    <h3>WELLNESS</h3>
+                    <p>Championing health and wellbeing as a foundation for stronger communities — because the same energy that drives a great match on the court is the energy we bring to serving others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pickleball For Good. Built with love, laughter, and kindness.</p>
+    </footer>
+
+    <!-- Chat Bot Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">💬</button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget hidden" id="chatWidget">
+        <div class="chat-header">
+            <h3>Vegas ALL Support</h3>
+            <button class="chat-close" id="chatClose">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">Hi! 👋 Welcome to Vegas ALL. How can I help you today?</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="chatSend">Send</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/common.js"></script>
+</body>
+</html>
