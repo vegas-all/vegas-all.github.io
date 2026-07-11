@@ -55,13 +55,54 @@
         .card h3 { margin-bottom: 15px; color: var(--primary); font-size: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
         .card p { font-size: 14px; line-height: 1.5; color: var(--dark); }
 
+        /* Contact Us Section */
+        .contact-section { background: var(--light); padding: 60px 5%; }
+        .contact-container { max-width: 600px; margin: 0 auto; }
+        .contact-section h2 { color: var(--accent); font-size: 22px; font-weight: bold; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600; }
+        .form-group input,
+        .form-group textarea { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 14px; font-family: inherit; transition: border-color 0.3s ease; }
+        .form-group input:focus,
+        .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .contact-btn { width: 100%; background: var(--accent); color: var(--primary); padding: 12px; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; cursor: pointer; transition: background 0.3s ease; }
+        .contact-btn:hover { background: #FFC700; }
+        .form-message { text-align: center; margin-top: 15px; padding: 10px; border-radius: 5px; display: none; }
+        .form-message.success { background: #d4edda; color: #155724; display: block; }
+        .form-message.error { background: #f8d7da; color: #721c24; display: block; }
+
         /* Toy Drive Banner */
         .toy-drive { background: linear-gradient(135deg, var(--accent) 0%, #FFE54C 100%); padding: 50px 5%; text-align: center; border-radius: 8px; margin: 40px 5%; border: none; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
         .toy-drive h2 { color: var(--primary); margin-bottom: 15px; font-size: 28px; }
         .toy-drive p { max-width: 600px; margin: 0 auto 20px; font-weight: 500; color: var(--primary); }
 
+        /* Chat Bot Widget */
+        .chat-widget { position: fixed; bottom: 20px; right: 20px; width: 380px; height: 600px; background: white; border-radius: 10px; box-shadow: 0 5px 40px rgba(0,0,0,0.16); display: flex; flex-direction: column; z-index: 999; font-family: inherit; }
+        .chat-header { background: var(--primary); color: white; padding: 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
+        .chat-header h3 { font-size: 16px; margin: 0; }
+        .chat-close { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .chat-messages { flex: 1; padding: 20px; overflow-y: auto; background: #f5f5f5; }
+        .message { margin-bottom: 12px; display: flex; }
+        .message.bot { justify-content: flex-start; }
+        .message.user { justify-content: flex-end; }
+        .message-content { max-width: 70%; padding: 10px 15px; border-radius: 8px; font-size: 14px; line-height: 1.4; }
+        .message.bot .message-content { background: white; color: var(--dark); border: 1px solid #ddd; }
+        .message.user .message-content { background: var(--accent); color: var(--primary); }
+        .chat-input { padding: 15px; border-top: 1px solid #ddd; display: flex; gap: 10px; }
+        .chat-input input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .chat-input button { background: var(--accent); color: var(--primary); border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
+        .chat-input button:hover { background: #FFC700; }
+        .chat-toggle { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: var(--accent); border: none; border-radius: 50%; color: var(--primary); font-size: 24px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 998; transition: background 0.3s ease; }
+        .chat-toggle:hover { background: #FFC700; }
+        .chat-widget.hidden { display: none; }
+
         /* Footer */
         footer { background: var(--primary); color: white; text-align: center; padding: 30px; font-size: 14px; }
+
+        @media (max-width: 600px) {
+            .chat-widget { width: 90%; height: 500px; right: 5%; left: 5%; }
+        }
     </style>
 </head>
 <body>
@@ -76,6 +117,7 @@
             <a href="#about">Our Mission</a>
             <a href="#events">Events</a>
             <a href="#toydrive">Toy Drive</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
 
@@ -133,10 +175,147 @@
         <a href="#register" class="btn">Drop-off Locations</a>
     </section>
 
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Pickleball For Good. Built with love, laughter, and kindness.</p>
     </footer>
+
+    <!-- Chat Bot Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">💬</button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget hidden" id="chatWidget">
+        <div class="chat-header">
+            <h3>Vegas ALL Support</h3>
+            <button class="chat-close" id="chatClose">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">Hi! 👋 Welcome to Vegas ALL. How can I help you today?</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="chatSend">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulate form submission (in production, this would send to a backend)
+            console.log('Form submitted:', { name, email, message });
+            
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessage.classList.add('success');
+            
+            this.reset();
+            
+            setTimeout(() => {
+                formMessage.classList.remove('success');
+            }, 5000);
+        });
+
+        // Chat Bot Handler
+        const chatToggle = document.getElementById('chatToggle');
+        const chatWidget = document.getElementById('chatWidget');
+        const chatClose = document.getElementById('chatClose');
+        const chatSend = document.getElementById('chatSend');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        chatToggle.addEventListener('click', () => {
+            chatWidget.classList.toggle('hidden');
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWidget.classList.add('hidden');
+        });
+
+        // Simple AI Bot Responses
+        const botResponses = {
+            'hello': 'Hi there! How can we help you today?',
+            'hi': 'Hello! Welcome to Vegas ALL. What can I do for you?',
+            'events': 'We host pickleball events throughout Las Vegas! Check our website for upcoming events or ask about specific dates.',
+            'mission': 'Our mission is to unite people through sports, outreach, and nourishment. We combat hunger and build community through pickleball.',
+            'feeding': 'We operate hunger relief initiatives both locally and internationally. We also run our annual toy and food drive in the Philippines!',
+            'pickleball': 'Pickleball is our platform for building social connection, promoting active lifestyles, and turning play into purpose.',
+            'contact': 'You can reach us through the contact form on this page or send us a message here!',
+            'help': 'I can help you with questions about our mission, events, programs, or how to get involved. What would you like to know?',
+            'default': 'That\'s a great question! Feel free to contact us through our contact form or call us. How else can I help?'
+        };
+
+        function getBotResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+            for (let key in botResponses) {
+                if (message.includes(key)) {
+                    return botResponses[key];
+                }
+            }
+            return botResponses['default'];
+        }
+
+        function sendMessage() {
+            const userMessage = chatInput.value.trim();
+            if (!userMessage) return;
+
+            // Add user message to chat
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'message user';
+            userMsgDiv.innerHTML = `<div class="message-content">${userMessage}</div>`;
+            chatMessages.appendChild(userMsgDiv);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Simulate bot response delay
+            setTimeout(() => {
+                const botResponse = getBotResponse(userMessage);
+                const botMsgDiv = document.createElement('div');
+                botMsgDiv.className = 'message bot';
+                botMsgDiv.innerHTML = `<div class="message-content">${botResponse}</div>`;
+                chatMessages.appendChild(botMsgDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 500);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
 
 </body>
 </html>
